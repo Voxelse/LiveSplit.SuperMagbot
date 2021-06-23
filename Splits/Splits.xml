@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Splits>
+  <Split name="AllLevels" text="Split at every level"/>
+
+  <Parent name="Magterra" text="Magterra">
+    <Split name="Level_1-1" text="1-1"/>
+    <Split name="Level_1-2" text="1-2"/>
+    <Split name="Level_1-3" text="1-3"/>
+    <Split name="Level_1-4" text="1-4"/>
+    <Split name="Level_1-5" text="1-5"/>
+    <Split name="Level_1-6" text="1-6"/>
+    <Split name="Level_1-7" text="1-7"/>
+    <Split name="Level_1-8" text="1-8"/>
+    <Split name="Level_1-9" text="1-9"/>
+    <Split name="Level_1-10" text="1-10"/>
+    <Split name="Level_1-11" text="1-11"/>
+    <Split name="Level_1-12" text="1-12"/>
+    <Split name="Level_1-13" text="1-13"/>
+    <Split name="Level_1-14" text="1-14"/>
+    <Split name="Level_1-15" text="1-15"/>
+    <Split name="Level_1-16" text="1-16"/>
+    <Split name="Level_1-17" text="1-17"/>
+    <Split name="Level_1-18" text="1-18"/>
+    <Split name="Level_1-19" text="1-19"/>
+    <Split name="Level_1-20" text="1-20"/>
+    <Split name="Level_1-21" text="1-21"/>
+    <Split name="Level_1-22" text="1-22"/>
+    <Split name="Level_1-23" text="1-23"/>
+    <Split name="Level_1-24" text="1-24"/>
+    <Split name="Level_1-25" text="1-25"/>
+    <Split name="Level_1-26" text="1-26"/>
+    <Split name="Level_1-27" text="1-27"/>
+  </Parent>
+  <Parent name="BrokenMagterra" text="Broken Magterra">
+    <Split name="Level_B1-1" text="B1-1"/>
+    <Split name="Level_B1-2" text="B1-2"/>
+    <Split name="Level_B1-3" text="B1-3"/>
+    <Split name="Level_B1-4" text="B1-4"/>
+    <Split name="Level_B1-5" text="B1-5"/>
+    <Split name="Level_B1-6" text="B1-6"/>
+    <Split name="Level_B1-7" text="B1-7"/>
+    <Split name="Level_B1-8" text="B1-8"/>
+    <Split name="Level_B1-9" text="B1-9"/>
+  </Parent>
+
+  <Parent name="Magzero" text="Magzero">
+    <Split name="Level_2-1" text="2-1"/>
+    <Split name="Level_2-2" text="2-2"/>
+    <Split name="Level_2-3" text="2-3"/>
+    <Split name="Level_2-4" text="2-4"/>
+    <Split name="Level_2-5" text="2-5"/>
+    <Split name="Level_2-6" text="2-6"/>
+    <Split name="Level_2-7" text="2-7"/>
+    <Split name="Level_2-8" text="2-8"/>
+    <Split name="Level_2-9" text="2-9"/>
+    <Split name="Level_2-10" text="2-10"/>
+    <Split name="Level_2-11" text="2-11"/>
+    <Split name="Level_2-12" text="2-12"/>
+    <Split name="Level_2-13" text="2-13"/>
+    <Split name="Level_2-14" text="2-14"/>
+    <Split name="Level_2-15" text="2-15"/>
+    <Split name="Level_2-16" text="2-16"/>
+    <Split name="Level_2-17" text="2-17"/>
+    <Split name="Level_2-18" text="2-18"/>
+    <Split name="Level_2-19" text="2-19"/>
+    <Split name="Level_2-20" text="2-20"/>
+    <Split name="Level_2-21" text="2-21"/>
+    <Split name="Level_2-22" text="2-22"/>
+    <Split name="Level_2-23" text="2-23"/>
+    <Split name="Level_2-24" text="2-24"/>
+    <Split name="Level_2-25" text="2-25"/>
+    <Split name="Level_2-26" text="2-26"/>
+    <Split name="Level_2-27" text="2-27"/>
+  </Parent>
+  <Parent name="BrokenMagzero" text="Broken Magzero">
+    <Split name="Level_B2-1" text="B2-1"/>
+    <Split name="Level_B2-2" text="B2-2"/>
+    <Split name="Level_B2-3" text="B2-3"/>
+    <Split name="Level_B2-4" text="B2-4"/>
+    <Split name="Level_B2-5" text="B2-5"/>
+    <Split name="Level_B2-6" text="B2-6"/>
+    <Split name="Level_B2-7" text="B2-7"/>
+    <Split name="Level_B2-8" text="B2-8"/>
+    <Split name="Level_B2-9" text="B2-9"/>
+  </Parent>
+
+  <Parent name="Magmah" text="Magmah">
+    <Split name="Level_3-1" text="3-1"/>
+    <Split name="Level_3-2" text="3-2"/>
+    <Split name="Level_3-3" text="3-3"/>
+    <Split name="Level_3-4" text="3-4"/>
+    <Split name="Level_3-5" text="3-5"/>
+    <Split name="Level_3-6" text="3-6"/>
+    <Split name="Level_3-7" text="3-7"/>
+    <Split name="Level_3-8" text="3-8"/>
+    <Split name="Level_3-9" text="3-9"/>
+    <Split name="Level_3-10" text="3-10"/>
+    <Split name="Level_3-11" text="3-11"/>
+    <Split name="Level_3-12" text="3-12"/>
+    <Split name="Level_3-13" text="3-13"/>
+    <Split name="Level_3-14" text="3-14"/>
+    <Split name="Level_3-15" text="3-15"/>
+    <Split name="Level_3-16" text="3-16"/>
+    <Split name="Level_3-17" text="3-17"/>
+    <Split name="Level_3-18" text="3-18"/>
+    <Split name="Level_3-19" text="3-19"/>
+    <Split name="Level_3-20" text="3-20"/>
+    <Split name="Level_3-21" text="3-21"/>
+    <Split name="Level_3-22" text="3-22"/>
+    <Split name="Level_3-23" text="3-23"/>
+    <Split name="Level_3-24" text="3-24"/>
+    <Split name="Level_3-25" text="3-25"/>
+    <Split name="Level_3-26" text="3-26"/>
+    <Split name="Level_3-27" text="3-27"/>
+  </Parent>
+  <Parent name="BrokenMagmah" text="Broken Magmah">
+    <Split name="Level_B3-1" text="B3-1"/>
+    <Split name="Level_B3-2" text="B3-2"/>
+    <Split name="Level_B3-3" text="B3-3"/>
+    <Split name="Level_B3-4" text="B3-4"/>
+    <Split name="Level_B3-5" text="B3-5"/>
+    <Split name="Level_B3-6" text="B3-6"/>
+    <Split name="Level_B3-7" text="B3-7"/>
+    <Split name="Level_B3-8" text="B3-8"/>
+    <Split name="Level_B3-9" text="B3-9"/>
+  </Parent>
+
+  <Parent name="Magtek" text="Magtek">
+    <Split name="Level_4-1" text="4-1"/>
+    <Split name="Level_4-2" text="4-2"/>
+    <Split name="Level_4-3" text="4-3"/>
+    <Split name="Level_4-4" text="4-4"/>
+    <Split name="Level_4-5" text="4-5"/>
+    <Split name="Level_4-6" text="4-6"/>
+    <Split name="Level_4-7" text="4-7"/>
+    <Split name="Level_4-8" text="4-8"/>
+    <Split name="Level_4-9" text="4-9"/>
+    <Split name="Level_4-10" text="4-10"/>
+    <Split name="Level_4-11" text="4-11"/>
+    <Split name="Level_4-12" text="4-12"/>
+    <Split name="Level_4-13" text="4-13"/>
+    <Split name="Level_4-14" text="4-14"/>
+    <Split name="Level_4-15" text="4-15"/>
+    <Split name="Level_4-16" text="4-16"/>
+    <Split name="Level_4-17" text="4-17"/>
+    <Split name="Level_4-18" text="4-18"/>
+    <Split name="Level_4-19" text="4-19"/>
+    <Split name="Level_4-20" text="4-20"/>
+    <Split name="Level_4-21" text="4-21"/>
+    <Split name="Level_4-22" text="4-22"/>
+    <Split name="Level_4-23" text="4-23"/>
+    <Split name="Level_4-24" text="4-24"/>
+    <Split name="Level_4-25" text="4-25"/>
+    <Split name="Level_4-26" text="4-26"/>
+    <Split name="Level_4-27" text="4-27"/>
+  </Parent>
+  <Parent name="BrokenMagtek" text="Broken Magtek">
+    <Split name="Level_B4-1" text="B4-1"/>
+    <Split name="Level_B4-2" text="B4-2"/>
+    <Split name="Level_B4-3" text="B4-3"/>
+    <Split name="Level_B4-4" text="B4-4"/>
+    <Split name="Level_B4-5" text="B4-5"/>
+    <Split name="Level_B4-6" text="B4-6"/>
+    <Split name="Level_B4-7" text="B4-7"/>
+    <Split name="Level_B4-8" text="B4-8"/>
+    <Split name="Level_B4-9" text="B4-9"/>
+  </Parent>
+
+  <Parent name="Magnetia Star" text="Magnetia Star">
+    <Split name="Level_X-1" text="X-1"/>
+    <Split name="Level_X-2" text="X-2"/>
+    <Split name="Level_X-3" text="X-3"/>
+    <Split name="Level_X-4" text="X-4"/>
+    <Split name="Level_X-5" text="X-5"/>
+    <Split name="Level_X-6" text="X-6"/>
+    <Split name="Level_X-7" text="X-7"/>
+    <Split name="Level_X-8" text="X-8"/>
+    <Split name="Level_X-9" text="X-9"/>
+    <Split name="Level_X-10" text="X-10"/>
+    <Split name="Level_X-11" text="X-11"/>
+    <Split name="Level_X-12" text="X-12"/>
+    <Split name="Level_X-13" text="X-13"/>
+    <Split name="Level_X-14" text="X-14"/>
+    <Split name="Level_X-15" text="X-15"/>
+  </Parent>
+</Splits>
