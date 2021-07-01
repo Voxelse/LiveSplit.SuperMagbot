@@ -1,12 +1,23 @@
 ﻿using LiveSplit.Model;
 using LiveSplit.UI.Components;
+using System.ComponentModel;
 using Voxif.AutoSplitter;
 using Voxif.IO;
 
 [assembly: ComponentFactory(typeof(Factory))]
 namespace LiveSplit.SuperMagbot {
-    public partial class SuperMagbotComponent : Component {
-        protected override SettingsInfo? ResetSettings => null;
+    public partial class SuperMagbotComponent : Voxif.AutoSplitter.Component {
+
+        public enum EStart {
+            [Description("Off")]
+            Off,
+            [Description("New Game")]
+            NewGame,
+            [Description("Any World")]
+            AnyWorld,
+        }
+
+        protected override SettingsInfo? StartSettings => new SettingsInfo((int)EStart.NewGame, GetEnumDescriptions<EStart>());
         protected override EGameTime GameTimeType => EGameTime.GameTime;
         protected override bool IsGameTimeDefault => false;
 

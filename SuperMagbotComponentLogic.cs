@@ -17,18 +17,19 @@ namespace LiveSplit.SuperMagbot {
                 return false;
             }
 
-            if("4-27".Equals(memory.LevelName.New)) {
-                if(memory.TransitionType.New == 0 && pauseFrames > 0) {
+            if(memory.TransitionType.New == 0) {
+                if(pauseFrames > 0) {
                     pauseFrames--;
                 }
-                if(memory.TransitionType.New == 1) {
-                    pauseFrames = 6;
-                }
+            } else if(memory.TransitionType.New == 1) {
+                pauseFrames = 6;
             }
 
-            if(!String.IsNullOrEmpty(memory.LevelName.Old) && String.IsNullOrEmpty(memory.LevelName.New)) {
+            if(String.IsNullOrEmpty(memory.LevelName.New)) {
                 inMenu = true;
-                AddGameTime();
+                if(!String.IsNullOrEmpty(memory.LevelName.Old)) {
+                    AddGameTime();
+                }
             } else if(memory.ElapsedCentiseconds.Old > memory.ElapsedCentiseconds.New) {
                 if(inMenu) {
                     if(!String.IsNullOrEmpty(memory.LevelName.New)) {
@@ -43,7 +44,9 @@ namespace LiveSplit.SuperMagbot {
         }
 
         public override bool Start() {
-            return "1-1".Equals(memory.LevelName.New) && (memory.ElapsedCentiseconds.Old > memory.ElapsedCentiseconds.New);
+            return memory.FadeOpacityPtr.New != default && memory.FadeOpacity.Old == 0 && memory.FadeOpacity.New > 0
+                && memory.LevelGridIndex.New == 0 && (memory.WorldTitle.New == "MAGTERRA" || settings.Start == (int)EStart.AnyWorld)
+                && memory.InLevelSelection();
         }
 
         public override void OnStart() {
@@ -54,7 +57,6 @@ namespace LiveSplit.SuperMagbot {
             remainingSplits.Setup(splitsCopy);
         }
 
-
         public override bool Split() {
             bool canSplit;
             if(!inMenu) {
@@ -63,6 +65,10 @@ namespace LiveSplit.SuperMagbot {
                 canSplit = "4-27".Equals(memory.LevelName.Old) && String.IsNullOrEmpty(memory.LevelName.New) && pauseFrames == 0;
             }
             return canSplit && (allLevelsSplit || (remainingSplits.ContainsKey("Level") && remainingSplits.Split("Level", memory.LevelName.Old)));
+        }
+
+        public override bool Reset() {
+            return memory.InWorldSelection();
         }
 
         public override void OnReset() {

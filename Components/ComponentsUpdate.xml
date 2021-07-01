@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <updates>
+  <update version="1.0.1">
+    <files>
+      <file path="Components/LiveSplit.SuperMagbot.dll" status="changed"/>
+    </files>
+    <changelog>
+      <change>Changed the start to match the community rule</change>
+      <change>Added a start option for individual world runs</change>
+      <change>Added a reset option that resets on the world selection</change>
+    </changelog>
+  </update>
   <update version="1.0.0">
     <files>
       <file path="Components/LiveSplit.SuperMagbot.dll" status="added"/>
