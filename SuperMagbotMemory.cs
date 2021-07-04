@@ -22,7 +22,7 @@ namespace LiveSplit.SuperMagbot {
         public StringPointer WorldTitle { get; private set; }
         
         private int fnameLevelMap;
-        private int fnameWorldMap;
+        private int fnameMenuMap;
 
         private UnrealHelperTask unrealTask;
 
@@ -44,10 +44,10 @@ namespace LiveSplit.SuperMagbot {
             NestedPointerFactory ptrFactory = new NestedPointerFactory(game);
 
             const string LevelMap = "SMLevelSelectionMap";
-            const string WorldMap = "SMMenuWorldSelectionMap";
-            var fnames = unreal.GetFNames(LevelMap, WorldMap);
+            const string MenuMap = "SMMenuMainMap";
+            var fnames = unreal.GetFNames(LevelMap, MenuMap);
             fnameLevelMap = fnames[LevelMap];
-            fnameWorldMap = fnames[WorldMap];
+            fnameMenuMap = fnames[MenuMap];
 
             IntPtr gameEngine = unreal.GetUObject("GameEngine");
 
@@ -91,6 +91,6 @@ namespace LiveSplit.SuperMagbot {
 
         public bool InLevelSelection() => SubLevelFName.New == fnameLevelMap;
 
-        public bool InWorldSelection() => SubLevelFName.New == fnameWorldMap;
+        public bool InMainMenu() => SubLevelFName.New == fnameMenuMap;
     }
 }

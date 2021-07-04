@@ -68,7 +68,7 @@ namespace LiveSplit.SuperMagbot {
         }
 
         public override bool Reset() {
-            return memory.InWorldSelection();
+            return memory.InMainMenu();
         }
 
         public override void OnReset() {
