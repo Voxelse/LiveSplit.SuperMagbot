@@ -4,6 +4,8 @@ using System.Collections.Generic;
 namespace LiveSplit.SuperMagbot {
     public partial class SuperMagbotComponent {
 
+        private int deathCount;
+
         private readonly RemainingDictionary remainingSplits;
         private bool allLevelsSplit;
 
@@ -17,13 +19,19 @@ namespace LiveSplit.SuperMagbot {
                 return false;
             }
 
-            if(memory.TransitionType.New == 0) {
+            if(DeathCounter && memory.MapTriesIncreased()) {
+                UpdateDeathCounter(++deathCount);
+            }
+
+            if(memory.TransitionType.New == ETransitionType.None) {
                 if(pauseFrames > 0) {
                     pauseFrames--;
                 }
-            } else if(memory.TransitionType.New == 1) {
+            } else if(memory.TransitionType.New == ETransitionType.Paused) {
                 pauseFrames = 6;
             }
+
+            memory.ElapsedCentiseconds.ForceUpdate();
 
             if(String.IsNullOrEmpty(memory.LevelName.New)) {
                 inMenu = true;
@@ -44,13 +52,13 @@ namespace LiveSplit.SuperMagbot {
         }
 
         public override bool Start() {
-            return memory.FadeOpacityPtr.New != default && memory.FadeOpacity.Old == 0 && memory.FadeOpacity.New > 0
+            return memory.FadeOpacity.Old == 0 && memory.FadeOpacity.New > 0
                 && memory.LevelGridIndex.New == 0 && (memory.WorldTitle.New == "MAGTERRA" || settings.Start == (int)EStart.AnyWorld)
                 && memory.InLevelSelection();
         }
 
         public override void OnStart() {
-            totalGameTime = 0;
+            ResetData();
 
             HashSet<string> splitsCopy = new HashSet<string>(settings.Splits);
             allLevelsSplit = splitsCopy.Remove("AllLevels");
@@ -68,11 +76,15 @@ namespace LiveSplit.SuperMagbot {
         }
 
         public override bool Reset() {
-            return memory.InMainMenu();
+            return memory.InMainMenu() || memory.FromLevelToWorld();
         }
 
         public override void OnReset() {
-            totalGameTime = 0;
+            ResetData();
+        }
+
+        public override TimeSpan? GameTime() {
+            return TimeSpan.FromMilliseconds(totalGameTime + (!inMenu ? memory.ElapsedCentiseconds.New * 10 : 0));
         }
 
         private void AddGameTime() {
@@ -82,8 +94,13 @@ namespace LiveSplit.SuperMagbot {
             totalGameTime += memory.ElapsedCentiseconds.Old * 10;
         }
 
-        public override TimeSpan? GameTime() {
-            return TimeSpan.FromMilliseconds(totalGameTime + (!inMenu ? memory.ElapsedCentiseconds.New * 10 : 0));
+        private void ResetData() {
+            totalGameTime = 0;
+            UpdateDeathCounter(deathCount = 0);
+        }
+
+        private void UpdateDeathCounter(int count) {
+            deathCounterComponent.Value = count.ToString();
         }
     }
 }

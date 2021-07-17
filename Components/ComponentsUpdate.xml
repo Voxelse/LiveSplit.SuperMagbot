@@ -1,5 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <updates>
+  <update version="1.0.3">
+    <files>
+      <file path="Components/LiveSplit.SuperMagbot.dll" status="changed"/>
+      <file path="Components/LiveSplit.RuntimeText.dll" status="added"/>
+    </files>
+    <changelog>
+      <change>Added death/reset counter option</change>
+      <change>Added reset on the transition from level selection to world selection</change>
+      <change>Fixed inconsistent gametime issue on timer start</change>
+    </changelog>
+  </update>
   <update version="1.0.2">
     <files>
       <file path="Components/LiveSplit.SuperMagbot.dll" status="changed"/>
